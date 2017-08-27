@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mongo Scraper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+  body{
+    background: linear-gradient(
+                     rgba(25,25,25, .8), 
+                     rgba(25,25,25, .8)),
+
+     url("./new.jfif");
+    z-index: -1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    
+  background-color: #8c9099;
+  }
+p{
+  
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  z-index: 1;
+
+}
+#newy{
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+#newy span{
+  font-size: 30px;
+}
+#empty{
+  background-color: #dd8f40;
+  color: #fff;
+  text-align: center;
+}
+#empty h3{
+  margin-top:-5px;
+}
+p span {
+  font-size: 60px;
+}
+#head{
+  background-color:#4e8ef4;
+}
+a{
+  color: #fff;
+}
+#topArticles{
+  margin-top: -1px;
+  background-color: #fff;
+  color: #000;
+}
+#topArticles p{
+color: #000;
+font-size: 15px;
+text-align: left;
+margin-top: 0px;
+}
+.panel-heading p{
+  float: left;
+color: #fff;
+font-size: 25px;
+text-align: left;
+margin-top:0px;
+}
+#container{
+  margin: 20px;
+  margin-top: 250px;
+
+}
+.panel-heading{
+  height: 60px;
+  background-color: #4e8ef4 ; 
+  color:#000;
+
+
+}
+.modal .close {
+      cursor: pointer;
+      font-size: 2em;
+      float: right;
+    }
+
+    .modalContent {
+      width: 100%;
+    }
+.modalContainer{
+  height: 400px;
+  width: 700px;
+  margin-top:80px;
+  float: right;
+  background-color: #fff;
+  text-align: center;
+  margin-right: 300px;
+}
+#notee{
+  text-align: left;
+  margin-top: 20px;
+   width: 80%;
+  height: 150px;
+}
+.insert{
+  background-color: #259e76;
+  color: #fff;
+  border:none;
+  float: right;
+  border-radius: 12px;
+  height: 35px;
+  margin-right: 70px;
+  margin-top: 10px;
+}
+#deletenote{
+  margin-top: -40px;
+  height: 40px;
+  width:50px;
+  color:#fff;
+  border:none;
+  margin-right: 30px;
+     float: right;
+     background-color: red;
+}
+#title{
+  width: 85%;
+  height: 60px;
+  text-align: center;
+  border:solid 0.1px;
+  margin-left: 50px;
+}
+#title p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
+  font-size: 15px;
+}
+
+.saveart{
+height: 30px;
+  border-radius: 12px;
+   border: none;
+  float: right;
+  margin-top: 10px;
+  margin-right:100px;
+  background-color: #22a57e;
+  color: #fff;
+  
+  
+}
+.jumbotron{
+  height: 10px;
+}
+/* Other Styles*/
+/*body{
+    background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),
+
+     url("new.jfif");
+    z-index: -1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    
+  background-color: #8c9099;
+  }*/
+p{
+  
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  z-index: 1;
+
+}
+#newy{
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+#newy span{
+  font-size: 30px;
+}
+p span {
+  font-size: 60px;
+}
+#head{
+  background-color:#4e8ef4;
+}
+a{
+  color: #fff;
+}
+#articles{
+  margin-top: -20px;
+  background-color: #fff;
+  color: #000;
+
+}
+#articles p{
+color: #000;
+font-size: 15px;
+text-align: left;
+margin-top: 0px;
+}
+#notes{
+  margin: 20px;
+  margin-top: 250px;
+}
+/*#notes h2{
+  color: #000;
+}*/
+.panel{
+  height: 60px; 
+  background-color: #4e8ef4 ; 
+  color:#fff;
+
+}
+.panel p{
+  float: left;
+color: #fff;
+font-size: 25px;
+text-align: left;
+margin-top:0px;
+}
+.note{
+ height: 30px;
+  border-radius: 12px;
+   border: none;
+  float: right;
+   margin-top: 10px;
+  background-color: #511472;
+  color: #fff;
+  }
+.delete{
+  height: 30px;
+  border-radius: 12px;
+   border: none;
+   margin-left: 0px;
+   margin-top: 10px;
+  float: right;
+  background-color: #c40733;
+  color: #fff;
+
+  }
+  
+  #articles.jumbotron{
+  height: 20px;
+} 
+</style>
+</head>
+
+<body>
+  {{{ body }}}
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+</html>
