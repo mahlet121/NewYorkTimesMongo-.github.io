@@ -40,7 +40,8 @@ app.engine("handlebars", expressHandlebars({
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/newyorktimes");
+mongoose.connect("mongodb://heroku_c5pdg1t4:5a0rjndf94teregmd046gktkv5@ds161493.mlab.");                                                                                            com:61493/heroku_c5pdg1t4
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
